@@ -1,0 +1,50 @@
+Step: step-credential-initializer-bqmtm:
+
+{"level":"warn","ts":1565715303.2845025,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565715303.285664,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-pcdlb:
+
+{"level":"warn","ts":1565715304.2619307,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565715304.262834,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-*********-environment-simo-8v2bl:
+
+{"level":"warn","ts":1565715316.3960848,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565715316.7108803,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-*********-staging.git @ f2815ace94a33a83fdf3a3f8c8180ce40c25db4a in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:f2815ace94a33a83fdf3a3f8c8180ce40c25db4a,4:5409a0307ee73ebf6946488a1d1687482782231f","time":"2019-08-13T16:55:17Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin 5409a0307ee73ebf6946488a1d1687482782231f: f2815ace94a33a83fdf3a3f8c8180ce40c25db4a: in ","time":"2019-08-13T16:55:18Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-13T16:55:18Z"}
+{"level":"debug","msg":"ran git reset --hard f2815ace94a33a83fdf3a3f8c8180ce40c25db4a in ","time":"2019-08-13T16:55:18Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-13T16:55:18Z"}
+{"level":"debug","msg":"ran git merge 5409a0307ee73ebf6946488a1d1687482782231f in ","time":"2019-08-13T16:55:18Z"}
+MERGED SHA SUBJECT
+5409a0307  chore: Promote go-demo-6 to version 1.0.337
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin 5409a0307ee73ebf6946488a1d1687482782231f: f2815ace94a33a83fdf3a3f8c8180ce40c25db4a: in ","time":"2019-08-13T16:55:19Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-13T16:55:19Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-13T16:55:19Z"}
+{"level":"debug","msg":"ran git reset --hard f2815ace94a33a83fdf3a3f8c8180ce40c25db4a in ","time":"2019-08-13T16:55:19Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-13T16:55:19Z"}
+{"level":"debug","msg":"ran git merge 5409a0307ee73ebf6946488a1d1687482782231f in ","time":"2019-08-13T16:55:19Z"}
+MERGED SHA SUBJECT
+5409a0307  chore: Promote go-demo-6 to version 1.0.337
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-13T16:55:20Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.jx/jenkins-x-versions","time":"2019-08-13T16:55:20Z"}
+{"level":"info","msg":"selected pack: /builder/home/.jx/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-13T16:55:21Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-build-effective.yml","time":"2019-08-13T16:55:22Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"PipelineActivity for *********-environment-*********-staging-PR-4-1","time":"2019-08-13T16:55:22Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-13T16:55:22Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-13T16:55:22Z"}
+{"level":"info","msg":"upserted PipelineResource *********-environment-********* for the git repository https://github.com/*********/environment-*********-staging.git and branch PR-4","time":"2019-08-13T16:55:22Z"}
+{"level":"info","msg":"upserted Task *********-environment-*********-c8q7v-from-build-pack-1","time":"2019-08-13T16:55:22Z"}
+{"level":"info","msg":"upserted Pipeline *********-environment-*********-c8q7v-1","time":"2019-08-13T16:55:22Z"}
+{"level":"info","msg":"created PipelineRun *********-environment-*********-c8q7v-1","time":"2019-08-13T16:55:22Z"}
+{"level":"info","msg":"created PipelineStructure *********-environment-*********-c8q7v-1","time":"2019-08-13T16:55:22Z"}
