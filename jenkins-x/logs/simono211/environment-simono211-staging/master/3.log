@@ -1,0 +1,40 @@
+Step: step-credential-initializer-rhljs:
+
+{"level":"warn","ts":1565713989.187007,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565713989.1873946,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-4b7zm:
+
+{"level":"warn","ts":1565713990.1717932,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565713990.173474,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-*********-environment-simo-2qrq5:
+
+{"level":"warn","ts":1565713996.3059638,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565713996.6268296,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-*********-staging.git @ f2815ace94a33a83fdf3a3f8c8180ce40c25db4a in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:f2815ace94a33a83fdf3a3f8c8180ce40c25db4a","time":"2019-08-13T16:33:17Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-08-13T16:33:17Z"}
+Step: step-merge-pull-refs:
+
+SKIP merge-pull-refs: Nothing to merge
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-13T16:33:18Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.jx/jenkins-x-versions","time":"2019-08-13T16:33:18Z"}
+{"level":"info","msg":"selected pack: /builder/home/.jx/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-13T16:33:19Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-effective.yml","time":"2019-08-13T16:33:20Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"running command: jx step next-version --use-git-tag-only --tag","time":"2019-08-13T16:33:20Z"}
+{"level":"info","msg":"created new version: 0.0.3 and written to file: ./VERSION","time":"2019-08-13T16:33:21Z"}
+{"level":"info","msg":"Tag v0.0.3 created and pushed to remote origin","time":"2019-08-13T16:33:23Z"}
+{"level":"info","msg":"","time":"2019-08-13T16:33:23Z"}
+{"level":"info","msg":"PipelineActivity for *********-environment-*********-staging-master-3","time":"2019-08-13T16:33:23Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-13T16:33:23Z"}
+{"level":"info","msg":"upserted PipelineResource *********-environment-********* for the git repository https://github.com/*********/environment-*********-staging.git and branch master","time":"2019-08-13T16:33:23Z"}
+{"level":"info","msg":"upserted Task *********-environment-*********-w9rbr-from-build-pack-3","time":"2019-08-13T16:33:23Z"}
+{"level":"info","msg":"upserted Pipeline *********-environment-*********-w9rbr-3","time":"2019-08-13T16:33:23Z"}
+{"level":"info","msg":"created PipelineRun *********-environment-*********-w9rbr-3","time":"2019-08-13T16:33:23Z"}
+{"level":"info","msg":"created PipelineStructure *********-environment-*********-w9rbr-3","time":"2019-08-13T16:33:23Z"}
