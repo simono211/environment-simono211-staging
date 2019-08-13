@@ -1,0 +1,54 @@
+Step: step-credential-initializer-6cjfm:
+
+{"level":"warn","ts":1565719881.0592027,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565719881.062639,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-xcbt8:
+
+{"level":"warn","ts":1565719881.7427185,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565719881.7441473,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-*********-environment-simo-8w4gm:
+
+{"level":"warn","ts":1565719975.8569965,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"error","ts":1565719975.9946525,"logger":"fallback-logger","caller":"git/git.go:35","msg":"Error running git [fetch --depth=1 --recurse-submodules=yes origin fb161b0be354cf6631aeded8dbde75b0f98a2a55]: exit status 128\nerror: Server does not allow request for unadvertised object fb161b0be354cf6631aeded8dbde75b0f98a2a55\n","stacktrace":"github.com/tektoncd/pipeline/pkg/git.run\n\t/workspace/go/src/github.com/tektoncd/pipeline/pkg/git/git.go:35\ngithub.com/tektoncd/pipeline/pkg/git.Fetch\n\t/workspace/go/src/github.com/tektoncd/pipeline/pkg/git/git.go:88\nmain.main\n\t/workspace/go/src/github.com/tektoncd/pipeline/cmd/git-init/main.go:36\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:200"}
+{"level":"error","ts":1565719976.205082,"logger":"fallback-logger","caller":"git/git.go:35","msg":"Error running git [pull --recurse-submodules=yes origin]: exit status 1\nFrom https://github.com/*********/environment-*********-staging\n * [new branch]      gh-pages            -> origin/gh-pages\n * [new branch]      master              -> origin/master\n * [new branch]      promote-go-demo-6-1.0.335 -> origin/promote-go-demo-6-1.0.335\n * [new branch]      promote-go-demo-6-1.0.336 -> origin/promote-go-demo-6-1.0.336\n * [new branch]      promote-go-demo-6-1.0.337 -> origin/promote-go-demo-6-1.0.337\n * [new branch]      promote-go-demo-6-1.0.338 -> origin/promote-go-demo-6-1.0.338\n * [new branch]      promote-go-demo-6-1.0.339 -> origin/promote-go-demo-6-1.0.339\n * [new branch]      promote-go-demo-6-1.0.340 -> origin/promote-go-demo-6-1.0.340\n * [new branch]      promote-jx-go-0.0.1 -> origin/promote-jx-go-0.0.1\nYou asked to pull from the remote 'origin', but did not specify\na branch. Because this is not the default configured remote\nfor your current branch, you must specify a branch on the command line.\n","stacktrace":"github.com/tektoncd/pipeline/pkg/git.run\n\t/workspace/go/src/github.com/tektoncd/pipeline/pkg/git/git.go:35\ngithub.com/tektoncd/pipeline/pkg/git.Fetch\n\t/workspace/go/src/github.com/tektoncd/pipeline/pkg/git/git.go:91\nmain.main\n\t/workspace/go/src/github.com/tektoncd/pipeline/cmd/git-init/main.go:36\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:200"}
+{"level":"warn","ts":1565719976.205193,"logger":"fallback-logger","caller":"git/git.go:92","msg":"Failed to pull origin : exit status 1"}
+{"level":"info","ts":1565719976.2104168,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-*********-staging.git @ fb161b0be354cf6631aeded8dbde75b0f98a2a55 in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:fb161b0be354cf6631aeded8dbde75b0f98a2a55,7:c6035cef3cd5c5c1884ed44e2865f965cf52e93f","time":"2019-08-13T18:12:57Z"}
+{"level":"debug","msg":"ran git fetch origin c6035cef3cd5c5c1884ed44e2865f965cf52e93f: fb161b0be354cf6631aeded8dbde75b0f98a2a55: in ","time":"2019-08-13T18:12:57Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-13T18:12:57Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-13T18:12:57Z"}
+{"level":"debug","msg":"ran git reset --hard fb161b0be354cf6631aeded8dbde75b0f98a2a55 in ","time":"2019-08-13T18:12:57Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-13T18:12:57Z"}
+{"level":"debug","msg":"ran git merge c6035cef3cd5c5c1884ed44e2865f965cf52e93f in ","time":"2019-08-13T18:12:57Z"}
+MERGED SHA SUBJECT
+c6035cef3  chore: Promote go-demo-6 to version 1.0.340
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin c6035cef3cd5c5c1884ed44e2865f965cf52e93f: fb161b0be354cf6631aeded8dbde75b0f98a2a55: in ","time":"2019-08-13T18:12:58Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-13T18:12:58Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-13T18:12:58Z"}
+{"level":"debug","msg":"ran git reset --hard fb161b0be354cf6631aeded8dbde75b0f98a2a55 in ","time":"2019-08-13T18:12:58Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-13T18:12:58Z"}
+{"level":"debug","msg":"ran git merge c6035cef3cd5c5c1884ed44e2865f965cf52e93f in ","time":"2019-08-13T18:12:58Z"}
+MERGED SHA SUBJECT
+c6035cef3  chore: Promote go-demo-6 to version 1.0.340
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-13T18:12:59Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.jx/jenkins-x-versions","time":"2019-08-13T18:12:59Z"}
+{"level":"info","msg":"selected pack: /builder/home/.jx/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-13T18:13:00Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-build-effective.yml","time":"2019-08-13T18:13:02Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"PipelineActivity for *********-environment-*********-staging-PR-7-1","time":"2019-08-13T18:13:03Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-13T18:13:03Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-13T18:13:03Z"}
+{"level":"info","msg":"upserted PipelineResource *********-environment-********* for the git repository https://github.com/*********/environment-*********-staging.git and branch PR-7","time":"2019-08-13T18:13:03Z"}
+{"level":"info","msg":"upserted Task *********-environment-*********-z5h9z-from-build-pack-1","time":"2019-08-13T18:13:03Z"}
+{"level":"info","msg":"upserted Pipeline *********-environment-*********-z5h9z-1","time":"2019-08-13T18:13:03Z"}
+{"level":"info","msg":"created PipelineRun *********-environment-*********-z5h9z-1","time":"2019-08-13T18:13:03Z"}
+{"level":"info","msg":"created PipelineStructure *********-environment-*********-z5h9z-1","time":"2019-08-13T18:13:03Z"}
